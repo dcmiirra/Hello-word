@@ -1,86 +1,99 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Решение шифров Цезаря</title>
-    <style>
-        body {
-            background-color: #ccff00; 
-            font-family: Arial, sans-serif;
-            padding: 20px;
-            margin: 0;
-            color: #000;
-        }
-        .container {
-            max-width: 800px;
-            margin: 0 auto;
-            background-color: rgba(255, 255, 255, 0.9);
-            padding: 25px;
-            border-radius: 10px;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-        }
-        h1, h2 {
-            color: #2e7d32;
-        }
-        a {
-            color: #1b5e20;
-            text-decoration: none;
-            font-weight: bold;
-        }
-        a:hover {
-            text-decoration: underline;
-        }
-        ul {
-            padding-left: 20px;
-        }
-        code {
-            background-color: #e8f5e9;
-            padding: 2px 6px;
-            border-radius: 4px;
-            font-family: monospace;
-        }
-        .downloads {
-            margin: 20px 0;
-            padding: 15px;
-            background-color: #e8f5e9;
-            border-left: 4px solid #4caf50;
-        }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Мой блог</title>
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      line-height: 1.6;
+      max-width: 900px;
+      margin: 40px auto;
+      padding: 20px;
+      background-color: #e3f2fd; /* Нежно-голубой фон */
+      color: #333;
+    }
+    h1, h2 {
+      color: #0288d1; /* Голубой для заголовков */
+    }
+    blockquote {
+      font-style: italic;
+      margin: 16px 0;
+      padding-left: 16px;
+      border-left: 4px solid #81d4fa; /* Светло-голубая линия */
+    }
+    a {
+      color: #0277bd; /* Темнее голубой для ссылок */
+      text-decoration: underline;
+    }
+    a:hover {
+      color: #01579b; /* Ещё темнее при наведении */
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+      margin: 10px 0;
+      border-radius: 8px;
+    }
+    video {
+      margin: 10px 0;
+    }
+    .post {
+      margin-bottom: 30px;
+      padding-bottom: 20px;
+      border-bottom: 1px dashed #b3e5fc; /* Светло-голубая пунктирная линия */
+    }
+  </style>
 </head>
 <body>
-    <div class="container">
-        <h1>Привет, мир!</h1>
 
-        <div class="downloads">
-            <p>Нажмите, чтобы скачать или открыть презентации:<br>
-                <a href="СетьВводный.pptx">Презентация в формате .pptx</a>
-            </p>
-            <p>Нажмите, чтобы скачать или открыть index.html:<br>
-                <a href="index.html">Файл проверки работы с кириллицей .html</a>
-            </p>
-        </div>
+  <h1>Добро пожаловать в мой блог!</h1>
 
-        <p><strong>Сегодня: 17 января 2026 года</strong></p>
+  <!-- Запись от 3 декабря 2025 -->
+  <div class="post">
+    <h2>3 декабря, 2025</h2>
+    <p>Поздравление с наступающим 2026 годом читайте <a href="Congratulations2026.html">здесь</a>.</p>
+  </div>
 
-        <h2>Решение шифров Цезаря</h2>
+  <!-- Запись от 15 декабря 2025 -->
+  <div class="post">
+    <h2>15 декабря, 2025</h2>
+    <p>Поздравление с наступающим 2026 годом читайте <a href="ura.odt">здесь</a>.</p>
+    <video controls width="400">
+      <source src="newTree.mp4" type="video/mp4" />
+      Ваш браузер не поддерживает элемент <video>, попробуйте обновить версию браузера.
+    </video>
+  </div>
 
-        <p><strong>1. Определение ключей:</strong></p>
-        <ul>
-            <li>а. АПЕЛЬСИН → САЦЬНВЩЮ: ключ <code>k = 17</code></li>
-            <li>б. АБРИКОС → ЫЬЛГЕЙМ: ключ <code>k = 27</code></li>
-        </ul>
+  <!-- Запись от 26 ноября 2025 -->
+  <div class="post">
+    <h2>26 ноября, 2025</h2>
+    <p>Я создала новогодние кроссворды для сайта <a href="http://адрес-сайта-друга/" title="Блог моего друга">моего друга</a>.</p>
+  </div>
 
-        <p><strong>2. Расшифровка сообщений:</strong></p>
-        <ul>
-            <li>а. ФХНЗКЧ → <code>ПРИВЕТ</code> (ключ <code>k = 5</code>)</li>
-            <li>б. ЦЩЕБФ → <code>ВЕСНА</code> (ключ <code>k = 20</code>)</li>
-        </ul>
+  <!-- Запись от 1 сентября 2025 -->
+  <div class="post">
+    <h2>1 сентября, 2025</h2>
+    <blockquote>Путешествие в тысячу миль начинается с одного шага (Лао Цзы)</blockquote>
+    <p>Оставляю в прошлом скучную неинтересную локальную файловую систему ради Всемирной паутины.</p>
+  </div>
 
-        <p><strong>3. Шифрование фамилии с ключом 10:</strong></p>
-        <p>Исходная: АХМЕДОВА → Зашифрованная: <code>КЯЦПОШМК</code></p>
-    </div>
+  <!-- Дополнительная запись (PDF) -->
+  <div class="post">
+    <h2>Документы</h2>
+    <p>Здесь вы можете ознакомиться с документом:</p>
+    <p>
+      <a href="pudelinka.pdf" target="_blank">Открыть "Pudelinka" (PDF)</a> 
+      или 
+      <a href="pudelinka.pdf" download>Скачать</a>
+    </p>
+  </div>
+
+  <!-- Контакт -->
+  <footer style="margin-top: 40px; text-align: center; color: #0277bd;">
+    <p>Хотите обсудить или задать вопрос? <a href="mailto:officialvivi69@gmail.com">Напишите мне</a>.</p>
+  </footer>
+
 </body>
-    <p>Иконки:</p>
-    <p><a href="https://www.flaticon.com/ru/free-icons/-" title="Рождественский колокол иконки">Рождественский колокол иконки от Pixelmeetup - Flaticon</a></p>                                                                                                                                                         
 </html>
