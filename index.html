@@ -10,6 +10,92 @@
 
   <h1>Добро пожаловать в мой блог!</h1>
 
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>RSA Демонстрация</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      max-width: 900px;
+      margin: 40px auto;
+      padding: 0 20px;
+      background-color: #f9f9f9;
+      color: #333;
+    }
+    h1, h2 {
+      color: #2c3e50;
+    }
+    .key-box {
+      background: #fff;
+      border-left: 4px solid #3498db;
+      padding: 15px;
+      margin: 20px 0;
+      overflow-x: auto;
+      white-space: pre-wrap;
+      word-break: break-all;
+    }
+    .small-example {
+      background: #f1f8ff;
+      padding: 15px;
+      border-radius: 6px;
+      margin: 25px 0;
+    }
+    .date {
+      font-weight: bold;
+      color: #e74c3c;
+    }
+    code {
+      background: #eee;
+      padding: 2px 6px;
+      border-radius: 3px;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Алгоритм RSA — Демонстрация</h1>
+
+  <p class="date">Дата: 21 января 2026 г.</p>
+
+  <div class="small-example">
+    <h2>Учебный пример (маленькие числа)</h2>
+    <p>Выбираем простые числа: <code>p = 3</code>, <code>q = 5</code></p>
+    <p><code>n = p × q = 15</code></p>
+    <p><code>φ(n) = (p−1)(q−1) = 8</code></p>
+    <p>Выбираем <code>e = 3</code> (взаимно просто с 8)</p>
+    <p>Находим <code>d = 3</code>, так как <code>(3 × 3) mod 8 = 1</code></p>
+    <p><strong>Открытый ключ:</strong> <code>(n=15, e=3)</code></p>
+    <p><strong>Закрытый ключ:</strong> <code>(n=15, d=3)</code></p>
+    <p>Сообщение <code>m = 2</code> → шифруем: <code>C = 2³ mod 15 = 8</code></p>
+    <p>Расшифровка: <code>M = 8³ mod 15 = 512 mod 15 = 2</code> ✅</p>
+  </div>
+
+  <h2>Как выглядит RSA в реальности?</h2>
+  <p>В настоящих системах (например, HTTPS, SSH) число <code>n</code> имеет длину <strong>600+ десятичных цифр</strong> (2048 бит).</p>
+
+  <h3>Открытый ключ (публичный)</h3>
+  <div class="key-box">
+n = 25195908475657893494027183240048398571429282126204032027777137836043662020707595556264018525880784406918290641249515082189298559149176184502808123599434220903497099937815785350202367187651553797481376855443674579943301676728741158266230896641828893232377456560879932329798370854214519527232285982133008048935284517895928805135383315051311931791308027637931225363359832793777025341447747272200229355608233208840244324381090265557033997281775059103790522154477442301
+
+e = 65537
+  </div>
+
+  <h3>Закрытый ключ (секретный)</h3>
+  <div class="key-box">
+n = (тот же, что выше)
+
+d = [ЗАКРЫТЫЙ КЛЮЧ НЕ ОТОБРАЖАЕТСЯ — в реальных системах он хранится в секрете и никогда не публикуется]
+  </div>
+
+  <p><em>Примечание: приведённое значение <code>n</code> — настоящее 2048-битное RSA-число (617 десятичных цифр). Оно используется только для демонстрации структуры ключа.</em></p>
+
+  <footer style="margin-top: 40px; color: #7f8c8d; font-size: 0.9em;">
+    &copy; 2026 — Демонстрационный сайт RSA | Образовательные цели
+  </footer>
+
+</body>
+
   <!-- Запись от 3 декабря 2025 -->
   <div class="post">
     <h2>3 декабря, 2025</h2>
